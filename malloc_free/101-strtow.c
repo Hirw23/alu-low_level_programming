@@ -8,7 +8,6 @@
  *
  * Return: pointer to an array of strings (words)
  */
-
 char **strtow(char *str)
 {
 	char **words;
@@ -19,7 +18,8 @@ char **strtow(char *str)
 
 	for (i = 0; str[i]; i++)
 	{
-		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
+		if (str[i] != ' ' &&
+		    (str[i + 1] == ' ' || str[i + 1] == '\0'))
 			wc++;
 	}
 
@@ -53,7 +53,6 @@ char **strtow(char *str)
 		words[j][k] = '\0';
 		i += len;
 	}
-
 	words[j] = NULL;
 
 	return (words);
